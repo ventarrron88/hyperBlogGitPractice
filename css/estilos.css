@@ -36,9 +36,16 @@ body
     font-weight: normal;
     font-size: 0.8em;
     padding:0 0 0 1em;
+
 }
 
 #cabecera #imagenCabecera{
     height: 20px;
     vertical-align: middle;
+}
+#footer{
+
+    background-color: #777;
+    text-align: center;
+    color: #fff;
 }
