@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Línea de Tiempo Horizontal con Conectores</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .timeline {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px 0;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .timeline-item {
+      flex: 1;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #d4d4d4;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-right: 20px; /* Espacio entre pasos */
+      position: relative;
+    }
+
+    .timeline-item:last-child {
+      margin-right: 0;
+    }
+
+    .timeline-connector {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      height: 2px;
+      width: calc(100% - 10px);
+      background-color: #007BFF;
+      z-index: -1;
+    }
+
+    .timeline-title {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      color: #007BFF;
+    }
+
+    .timeline-body {
+      color: #555555;
+    }
+
+    @media (max-width: 768px) {
+      .timeline {
+        flex-direction: column;
+      }
+
+      .timeline-item {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0;
+      }
+
+      .timeline-connector {
+        width: 2px;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Línea de Tiempo Horizontal con Conectores</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-title">Evento 1</div>
+      <div class="timeline-body">
+        Contenido del evento 1.
+      </div>
+      <div class="timeline-connector"></div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-title">Evento 2</div>
+      <div class="timeline-body">
+        Contenido del evento 2.
+      </div>
+      <div class="timeline-connector"></div>
+    </div>
+    <!-- Agrega más eventos según sea necesario -->
+    <div class="timeline-item">
+      <div class="timeline-title">Evento 2</div>
+      <div class="timeline-body">
+        Contenido del evento 2.
+      </div>
+      <div class="timeline-connector"></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
